@@ -1,0 +1,3 @@
+/home/biren/computer-vision/build/CMakeFiles/perspective_projection.dir
+/home/biren/computer-vision/build/CMakeFiles/edit_cache.dir
+/home/biren/computer-vision/build/CMakeFiles/rebuild_cache.dir
