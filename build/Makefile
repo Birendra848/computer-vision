@@ -126,56 +126,21 @@ perspective_projection: cmake_check_build_system
 
 # fast build rule for target.
 perspective_projection/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/build
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/perspective_projection.dir/build.make src/CMakeFiles/perspective_projection.dir/build
 .PHONY : perspective_projection/fast
 
-src/image_formation/perspective_projection.o: src/image_formation/perspective_projection.cpp.o
-.PHONY : src/image_formation/perspective_projection.o
+#=============================================================================
+# Target rules for targets named image_formation
 
-# target to build an object file
-src/image_formation/perspective_projection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/image_formation/perspective_projection.cpp.o
-.PHONY : src/image_formation/perspective_projection.cpp.o
+# Build rule for target.
+image_formation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 image_formation
+.PHONY : image_formation
 
-src/image_formation/perspective_projection.i: src/image_formation/perspective_projection.cpp.i
-.PHONY : src/image_formation/perspective_projection.i
-
-# target to preprocess a source file
-src/image_formation/perspective_projection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/image_formation/perspective_projection.cpp.i
-.PHONY : src/image_formation/perspective_projection.cpp.i
-
-src/image_formation/perspective_projection.s: src/image_formation/perspective_projection.cpp.s
-.PHONY : src/image_formation/perspective_projection.s
-
-# target to generate assembly for a file
-src/image_formation/perspective_projection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/image_formation/perspective_projection.cpp.s
-.PHONY : src/image_formation/perspective_projection.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+# fast build rule for target.
+image_formation/fast:
+	$(MAKE) $(MAKESILENT) -f src/image_formation/CMakeFiles/image_formation.dir/build.make src/image_formation/CMakeFiles/image_formation.dir/build
+.PHONY : image_formation/fast
 
 # Help Target
 help:
@@ -185,13 +150,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... image_formation"
 	@echo "... perspective_projection"
-	@echo "... src/image_formation/perspective_projection.o"
-	@echo "... src/image_formation/perspective_projection.i"
-	@echo "... src/image_formation/perspective_projection.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 

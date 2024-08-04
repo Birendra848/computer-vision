@@ -1,15 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
-project(computer_vision)
+project(ComputerVision)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-find_package(Python3 COMPONENTS Development NumPy)
-find_package(PythonLibs 3.0 REQUIRED)
+# Find and include Eigen
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
-include_directories(include ${PYTHON_INCLUDE_DIRS} ${PYTHON_NUMPY_INCLUDE_DIR})
+# Find Python and include its directories
+find_package(PythonLibs 3 REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
 
-add_executable(perspective_projection 
-    src/main.cpp
-    src/image_formation/perspective_projection.cpp)
+# Include Matplotlib-cpp
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
-target_link_libraries(perspective_projection ${PYTHON_LIBRARIES})
+# Add source directories
+add_subdirectory(src)

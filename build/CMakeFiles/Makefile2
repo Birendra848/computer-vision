@@ -63,42 +63,100 @@ CMAKE_BINARY_DIR = /home/biren/computer-vision/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/perspective_projection.dir/all
+all: src/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/perspective_projection.dir/clean
+clean: src/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/perspective_projection.dir
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all: src/CMakeFiles/perspective_projection.dir/all
+src/all: src/image_formation/all
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall: src/image_formation/preinstall
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean: src/CMakeFiles/perspective_projection.dir/clean
+src/clean: src/image_formation/clean
+.PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/image_formation
+
+# Recursive "all" directory target.
+src/image_formation/all: src/image_formation/CMakeFiles/image_formation.dir/all
+.PHONY : src/image_formation/all
+
+# Recursive "preinstall" directory target.
+src/image_formation/preinstall:
+.PHONY : src/image_formation/preinstall
+
+# Recursive "clean" directory target.
+src/image_formation/clean: src/image_formation/CMakeFiles/image_formation.dir/clean
+.PHONY : src/image_formation/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/perspective_projection.dir
 
 # All Build rule for target.
-CMakeFiles/perspective_projection.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/biren/computer-vision/build/CMakeFiles --progress-num=1,2,3 "Built target perspective_projection"
-.PHONY : CMakeFiles/perspective_projection.dir/all
+src/CMakeFiles/perspective_projection.dir/all: src/image_formation/CMakeFiles/image_formation.dir/all
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/perspective_projection.dir/build.make src/CMakeFiles/perspective_projection.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/perspective_projection.dir/build.make src/CMakeFiles/perspective_projection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/biren/computer-vision/build/CMakeFiles --progress-num=3,4 "Built target perspective_projection"
+.PHONY : src/CMakeFiles/perspective_projection.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/perspective_projection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/biren/computer-vision/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/perspective_projection.dir/all
+src/CMakeFiles/perspective_projection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/biren/computer-vision/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/perspective_projection.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/biren/computer-vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/perspective_projection.dir/rule
+.PHONY : src/CMakeFiles/perspective_projection.dir/rule
 
 # Convenience name for target.
-perspective_projection: CMakeFiles/perspective_projection.dir/rule
+perspective_projection: src/CMakeFiles/perspective_projection.dir/rule
 .PHONY : perspective_projection
 
 # clean rule for target.
-CMakeFiles/perspective_projection.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perspective_projection.dir/build.make CMakeFiles/perspective_projection.dir/clean
-.PHONY : CMakeFiles/perspective_projection.dir/clean
+src/CMakeFiles/perspective_projection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/perspective_projection.dir/build.make src/CMakeFiles/perspective_projection.dir/clean
+.PHONY : src/CMakeFiles/perspective_projection.dir/clean
+
+#=============================================================================
+# Target rules for target src/image_formation/CMakeFiles/image_formation.dir
+
+# All Build rule for target.
+src/image_formation/CMakeFiles/image_formation.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/image_formation/CMakeFiles/image_formation.dir/build.make src/image_formation/CMakeFiles/image_formation.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/image_formation/CMakeFiles/image_formation.dir/build.make src/image_formation/CMakeFiles/image_formation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/biren/computer-vision/build/CMakeFiles --progress-num=1,2 "Built target image_formation"
+.PHONY : src/image_formation/CMakeFiles/image_formation.dir/all
+
+# Build rule for subdir invocation for target.
+src/image_formation/CMakeFiles/image_formation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/biren/computer-vision/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/image_formation/CMakeFiles/image_formation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/biren/computer-vision/build/CMakeFiles 0
+.PHONY : src/image_formation/CMakeFiles/image_formation.dir/rule
+
+# Convenience name for target.
+image_formation: src/image_formation/CMakeFiles/image_formation.dir/rule
+.PHONY : image_formation
+
+# clean rule for target.
+src/image_formation/CMakeFiles/image_formation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/image_formation/CMakeFiles/image_formation.dir/build.make src/image_formation/CMakeFiles/image_formation.dir/clean
+.PHONY : src/image_formation/CMakeFiles/image_formation.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

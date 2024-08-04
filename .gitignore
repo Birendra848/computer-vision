@@ -37,6 +37,19 @@ Makefile
 ._*
 .Spotlight-V100
 .Trashes
-gitAccessToken.txt
 ehthumbs.db
 Thumbs.db
+
+# Git access token file
+gitAccessToken.txt
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Backup files
+*~
+*.bak
+
+# Logs
+*.log

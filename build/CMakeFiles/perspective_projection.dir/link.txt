@@ -1,1 +1,0 @@
-/usr/lib/ccache/c++ CMakeFiles/perspective_projection.dir/src/main.cpp.o CMakeFiles/perspective_projection.dir/src/image_formation/perspective_projection.cpp.o -o perspective_projection  /usr/lib/x86_64-linux-gnu/libpython3.10.so 
